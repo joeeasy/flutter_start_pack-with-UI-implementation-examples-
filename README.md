@@ -1,4 +1,4 @@
-# skeletalarchitecture
+# skeletalarchitecture with stack package
 Ready made MVVM architecture for starting your flutter apps.
 - Implements provider state management solutions.
 - uses `getIT` for dependency injections.
