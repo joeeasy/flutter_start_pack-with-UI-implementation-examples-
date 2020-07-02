@@ -8,8 +8,8 @@ class StartupView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<StartupViewModel>.reactive(
       builder: (context, model, child) => Scaffold(
-        body: Center(child: Text(model.title),),
-        floatingActionButton: FloatingActionButton(onPressed: () => model.updateCounter(), child: Icon(Icons.add),),
+        body: Center(child: Text('Start up view'),),
+        floatingActionButton: FloatingActionButton(onPressed: () => model.natiiveToHome(), child: Icon(Icons.add),),
       ),
       viewModelBuilder: () => StartupViewModel(),
     );

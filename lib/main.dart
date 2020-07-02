@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:skeletalarchitecture/ui/view/home/home_view.dart';
+import 'package:skeletalarchitecture/app/locator.dart';
+import 'package:skeletalarchitecture/app/router.gr.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 void main() {
+  setupLocator();
   runApp(MyApp());
 }
 
@@ -15,7 +18,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeView(),
+      initialRoute: Routes.startupViewRoute,
+      onGenerateRoute: Router().onGenerateRoute,
+      navigatorKey: locator<NavigationService>().navigatorKey,
     );
   }
 }
