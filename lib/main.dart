@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:skeletalarchitecture/app/locator.dart';
 import 'package:skeletalarchitecture/app/router.gr.dart';
+import 'package:skeletalarchitecture/ui/view/partial_builds/partial_builds_view.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 void main() {
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: Routes.startupViewRoute,
+//      initialRoute: Routes.startupViewRoute,
+      home: PartialBuildsView(),
       onGenerateRoute: Router().onGenerateRoute,
       navigatorKey: locator<NavigationService>().navigatorKey,
     );
