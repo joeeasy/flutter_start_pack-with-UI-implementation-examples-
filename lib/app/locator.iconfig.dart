@@ -4,12 +4,14 @@
 // InjectableConfigGenerator
 // **************************************************************************
 
+import 'package:skeletalarchitecture/services/counter_service.dart';
 import 'package:skeletalarchitecture/services/third_party_service_module.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:get_it/get_it.dart';
 
 void $initGetIt(GetIt g, {String environment}) {
   final thirdPartyServiceModule = _$ThirdPartyServiceModule();
+  g.registerLazySingleton<CounterService>(() => CounterService());
   g.registerLazySingleton<DialogService>(
       () => thirdPartyServiceModule.dialogService);
   g.registerLazySingleton<NavigationService>(
